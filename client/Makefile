@@ -1,6 +1,6 @@
 CXX=g++
 RM=rm -f
-CPPFLAGS=-g -I../inc -I.
+CPPFLAGS=-g -Wall -I../inc -I. -std=c++14
 
 SRCS=client_main.cpp ../SharedMem.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
