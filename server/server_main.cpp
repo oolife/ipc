@@ -75,7 +75,6 @@ static void printRequest(request_t& request)
 static int processByTargetModule(request_t& request)
 {
     int moduleId = (int)request.payload.targetModule;
-    char mmm = request.payload.targetModule;
 
     if(moduleId%5==0)
         return 0;
@@ -86,7 +85,8 @@ static int processByTargetModule(request_t& request)
 static response_t processRequest(request_t& request)
 {
     response_t response;
-    SharedMem *shmem = SharedMem::getInstance();
+
+    response.clientPid = request.clientPid;
     response.requestId = request.requestId;
     response.result = processByTargetModule(request);
     //cout << "result : " << response.result << endl; 

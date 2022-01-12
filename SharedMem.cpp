@@ -130,5 +130,5 @@ int SharedMem::UnlinkSharedMemory(void)
 
 pid_t SharedMem::SharedMemoryReadRespPid()
 {
-    return ((ipc_data_t *)m_shmAddr)->request.clientPid;
+    return ((ipc_data_t *)m_shmAddr)->response.clientPid;
 }

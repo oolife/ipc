@@ -2,7 +2,6 @@
 #define __IPC_DATA_H__
 #include <sys/types.h>
 
-#define  KEY_NUM   1238
 
 typedef struct 
 {
@@ -26,6 +25,7 @@ typedef struct
 
 typedef struct 
 {
+    pid_t clientPid;
     int requestId;
     int result;
 }response_t;

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#define  KEY_NUM   1238
+#define  KEY_NUM   1212
 #define  MEM_SIZE  sizeof(ipc_data_t)
 
 class SharedMem {
